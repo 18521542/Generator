@@ -1,0 +1,7 @@
+D:\Đại học\Năm3\Đặc tả hình thức\Generator\AllMyClass\bin\Release\AllMyClass.dll.config
+D:\Đại học\Năm3\Đặc tả hình thức\Generator\AllMyClass\bin\Release\AllMyClass.dll
+D:\Đại học\Năm3\Đặc tả hình thức\Generator\AllMyClass\bin\Release\AllMyClass.pdb
+D:\Đại học\Năm3\Đặc tả hình thức\Generator\AllMyClass\obj\Release\AllMyClass.csprojAssemblyReference.cache
+D:\Đại học\Năm3\Đặc tả hình thức\Generator\AllMyClass\obj\Release\AllMyClass.csproj.CoreCompileInputs.cache
+D:\Đại học\Năm3\Đặc tả hình thức\Generator\AllMyClass\obj\Release\AllMyClass.dll
+D:\Đại học\Năm3\Đặc tả hình thức\Generator\AllMyClass\obj\Release\AllMyClass.pdb
