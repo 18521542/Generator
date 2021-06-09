@@ -49,6 +49,7 @@ namespace Generator
         {
             try
             {
+                clear();
                 Open();
                 Generate(richTextBox1.Lines[0], richTextBox1.Lines[1], richTextBox1.Lines[2]);
             }
@@ -71,20 +72,10 @@ namespace Generator
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
                     string text = File.ReadAllText(ofd.FileName);
-                    //this.contentOfInputFile = File.ReadAllLines(ofd.FileName);
-
-                    //string FirstLine = contentOfInputFile[0];
-                    //string SecondLine = contentOfInputFile[1];
-                    //string ThirdLine = contentOfInputFile[2];
-
-                    //ctrl.HandleFirstLine(FirstLine, ref this.parameters, ref this.FunctionName);
-                    //ctrl.HandleSecondLine(SecondLine, ref this.Preconditions);
-                    //ctrl.HandleThirdLine(ThirdLine, ref this.conditions);
-                    //this.MyDebug();
+                    //richTextBox1.Text = "";
                     richTextBox1.Text = text;
 
                     this.InstancePath = ofd.FileName.ToString();
-                    //this.isNew = false;
                 }
             }
         }
