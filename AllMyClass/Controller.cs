@@ -7,10 +7,12 @@ namespace AllMyClass
     {
         public void HandleFirstLine(String firstLine, ref List<Parameters> parameters,ref Name Header )
         {
+            
+            String BiggestContent = firstLine.Replace(" ", string.Empty);
             char openBracket = '(';
             char closeBracket = ')';
             char separateChar = ',';
-            String[] content = firstLine.Split(openBracket, separateChar, closeBracket);
+            String[] content = BiggestContent.Split(openBracket, separateChar, closeBracket);
 
             String headerContent = content[0];
             int index = 0;
