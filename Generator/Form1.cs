@@ -47,28 +47,15 @@ namespace Generator
 
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
-            Open();
-            //generator = new GeneratorMacine(this.parameters, this.FunctionName, this.conditions, this.Preconditions);
-
-            //generator.WriteFunc_Nhap(richTextBox2);
-            //generator.WriteEndLine(richTextBox2);
-            //generator.WriteEndLine(richTextBox2);
-
-            //generator.WriteFunc_Xuat(richTextBox2);
-            //generator.WriteEndLine(richTextBox2);
-            //generator.WriteEndLine(richTextBox2);
-
-            //generator.WriteFunc_KiemTra(richTextBox2);
-            //generator.WriteEndLine(richTextBox2);
-            //generator.WriteEndLine(richTextBox2);
-
-            //generator.WriteFunc_FormalSpecification(richTextBox2);
-            //generator.WriteEndLine(richTextBox2);
-            //generator.WriteEndLine(richTextBox2);
-
-            //generator.WriteFunc_Main(richTextBox2);
-            Generate(richTextBox1.Lines[0], richTextBox1.Lines[1], richTextBox1.Lines[2]);
-
+            try
+            {
+                Open();
+                Generate(richTextBox1.Lines[0], richTextBox1.Lines[1], richTextBox1.Lines[2]);
+            }
+            catch(Exception ex)
+            {
+                Console.Write(ex);
+            }
         }
 
         private void Open()

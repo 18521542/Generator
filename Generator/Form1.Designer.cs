@@ -280,6 +280,7 @@ namespace Generator
             this.tbExename.Name = "tbExename";
             this.tbExename.Size = new System.Drawing.Size(183, 28);
             this.tbExename.TabIndex = 9;
+            this.tbExename.Text = "abc.exe";
             // 
             // btnBuild
             // 

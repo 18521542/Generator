@@ -1,7 +1,0 @@
-D:\Đại học\Năm3\Đặc tả hình thức\Generator\AllMyClass\bin\Debug\AllMyClass.dll.config
-D:\Đại học\Năm3\Đặc tả hình thức\Generator\AllMyClass\bin\Debug\AllMyClass.dll
-D:\Đại học\Năm3\Đặc tả hình thức\Generator\AllMyClass\bin\Debug\AllMyClass.pdb
-D:\Đại học\Năm3\Đặc tả hình thức\Generator\AllMyClass\obj\Debug\AllMyClass.csproj.CoreCompileInputs.cache
-D:\Đại học\Năm3\Đặc tả hình thức\Generator\AllMyClass\obj\Debug\AllMyClass.dll
-D:\Đại học\Năm3\Đặc tả hình thức\Generator\AllMyClass\obj\Debug\AllMyClass.pdb
-D:\Đại học\Năm3\Đặc tả hình thức\Generator\AllMyClass\obj\Debug\AllMyClass.csprojAssemblyReference.cache
