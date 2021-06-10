@@ -42,6 +42,7 @@ namespace AllMyClass
                     break;
                 default:
                     type = "String";
+                    this.DefaultValue = "\"\"";
                     break;
             }
         }

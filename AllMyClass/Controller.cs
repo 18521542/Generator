@@ -39,6 +39,11 @@ namespace AllMyClass
             String BiggestContent = ThirdLine.Replace("post", string.Empty);
             BiggestContent = BiggestContent.Replace(" ", string.Empty);
 
+            if (!BiggestContent.Contains("("))
+            {
+                BiggestContent = "(" + BiggestContent + ")";
+            }
+                
 
             if (BiggestContent.Contains("||"))
             {
@@ -63,6 +68,11 @@ namespace AllMyClass
 
             if (BiggestContent == "")
                 return;
+
+            if (!BiggestContent.Contains("("))
+            {
+                BiggestContent = "(" + BiggestContent + ")";
+            }
 
             if (BiggestContent.Contains("||"))
             {
