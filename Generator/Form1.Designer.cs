@@ -46,8 +46,8 @@ namespace Generator
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.cutBtn = new System.Windows.Forms.ToolStripButton();
+            this.pasteBtn = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
@@ -78,7 +78,7 @@ namespace Generator
             this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(952, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1245, 28);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -146,15 +146,15 @@ namespace Generator
             this.toolStripButton5,
             this.toolStripButton4,
             this.toolStripSeparator1,
-            this.toolStripButton1,
-            this.toolStripButton2,
+            this.cutBtn,
+            this.pasteBtn,
             this.toolStripSeparator2,
             this.toolStripTextBox2,
             this.toolStripSeparator3,
             this.toolStripLabel5});
             this.toolStrip1.Location = new System.Drawing.Point(0, 28);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(952, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(1245, 27);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -192,23 +192,25 @@ namespace Generator
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
-            // toolStripButton1
+            // cutBtn
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(29, 24);
-            this.toolStripButton1.Text = "toolStripButton1";
+            this.cutBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.cutBtn.Image = ((System.Drawing.Image)(resources.GetObject("cutBtn.Image")));
+            this.cutBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.cutBtn.Name = "cutBtn";
+            this.cutBtn.Size = new System.Drawing.Size(29, 24);
+            this.cutBtn.Text = "toolStripButton1";
+            this.cutBtn.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
-            // toolStripButton2
+            // pasteBtn
             // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(29, 24);
-            this.toolStripButton2.Text = "toolStripButton2";
+            this.pasteBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.pasteBtn.Image = ((System.Drawing.Image)(resources.GetObject("pasteBtn.Image")));
+            this.pasteBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.pasteBtn.Name = "pasteBtn";
+            this.pasteBtn.Size = new System.Drawing.Size(29, 24);
+            this.pasteBtn.Text = "toolStripButton2";
+            this.pasteBtn.Click += new System.EventHandler(this.pasteBtn_Click);
             // 
             // toolStripSeparator2
             // 
@@ -247,16 +249,16 @@ namespace Generator
             // richTextBox1
             // 
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Location = new System.Drawing.Point(0, 166);
+            this.richTextBox1.Location = new System.Drawing.Point(0, 113);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(332, 335);
+            this.richTextBox1.Size = new System.Drawing.Size(629, 388);
             this.richTextBox1.TabIndex = 4;
             this.richTextBox1.Text = "";
             this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // richTextBox2
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(338, 69);
+            this.richTextBox2.Location = new System.Drawing.Point(635, 69);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.Size = new System.Drawing.Size(610, 432);
             this.richTextBox2.TabIndex = 5;
@@ -267,7 +269,7 @@ namespace Generator
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(4, 80);
+            this.label1.Location = new System.Drawing.Point(4, 72);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(139, 25);
             this.label1.TabIndex = 7;
@@ -276,7 +278,7 @@ namespace Generator
             // tbExename
             // 
             this.tbExename.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbExename.Location = new System.Drawing.Point(149, 79);
+            this.tbExename.Location = new System.Drawing.Point(149, 72);
             this.tbExename.Name = "tbExename";
             this.tbExename.Size = new System.Drawing.Size(183, 28);
             this.tbExename.TabIndex = 9;
@@ -284,9 +286,9 @@ namespace Generator
             // 
             // btnBuild
             // 
-            this.btnBuild.Location = new System.Drawing.Point(0, 113);
+            this.btnBuild.Location = new System.Drawing.Point(338, 69);
             this.btnBuild.Name = "btnBuild";
-            this.btnBuild.Size = new System.Drawing.Size(332, 47);
+            this.btnBuild.Size = new System.Drawing.Size(291, 31);
             this.btnBuild.TabIndex = 10;
             this.btnBuild.Text = "Build Solution";
             this.btnBuild.UseVisualStyleBackColor = true;
@@ -296,7 +298,7 @@ namespace Generator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(952, 513);
+            this.ClientSize = new System.Drawing.Size(1245, 513);
             this.Controls.Add(this.btnBuild);
             this.Controls.Add(this.tbExename);
             this.Controls.Add(this.label1);
@@ -330,8 +332,8 @@ namespace Generator
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton cutBtn;
+        private System.Windows.Forms.ToolStripButton pasteBtn;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;

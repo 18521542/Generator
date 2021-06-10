@@ -185,8 +185,15 @@ namespace Generator
 
         private void generatingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            clear();
-            Generate(richTextBox1.Lines[0], richTextBox1.Lines[1], richTextBox1.Lines[2]);
+            try
+            {
+                clear();
+                Generate(richTextBox1.Lines[0], richTextBox1.Lines[1], richTextBox1.Lines[2]);
+            }
+            catch(Exception ex)
+            {
+
+            }
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -194,5 +201,34 @@ namespace Generator
             //Win32.FreeConsole();
         }
 
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Clipboard.SetText(richTextBox1.SelectedText);
+
+                richTextBox1.SelectedText = string.Empty;
+            }
+            catch(Exception ex)
+            {
+
+            }
+            
+        }
+
+        private void pasteBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string xx = Clipboard.GetText();
+
+                richTextBox1.Text = richTextBox1.Text.Insert(richTextBox1.SelectionStart, xx);
+            }
+            catch (Exception ex)
+            {
+
+            }
+            
+        }
     }
 }
