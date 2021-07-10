@@ -58,6 +58,7 @@ namespace Generator
             this.label1 = new System.Windows.Forms.Label();
             this.tbExename = new System.Windows.Forms.TextBox();
             this.btnBuild = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -186,6 +187,7 @@ namespace Generator
             this.toolStripButton4.Name = "toolStripButton4";
             this.toolStripButton4.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton4.Text = "toolStripButton4";
+            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
             // toolStripSeparator1
             // 
@@ -219,7 +221,6 @@ namespace Generator
             // 
             // toolStripTextBox2
             // 
-            this.toolStripTextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox2.Name = "toolStripTextBox2";
             this.toolStripTextBox2.ReadOnly = true;
             this.toolStripTextBox2.Size = new System.Drawing.Size(50, 27);
@@ -249,9 +250,9 @@ namespace Generator
             // richTextBox1
             // 
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Location = new System.Drawing.Point(0, 113);
+            this.richTextBox1.Location = new System.Drawing.Point(0, 149);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(629, 388);
+            this.richTextBox1.Size = new System.Drawing.Size(629, 352);
             this.richTextBox1.TabIndex = 4;
             this.richTextBox1.Text = "";
             this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
@@ -294,11 +295,22 @@ namespace Generator
             this.btnBuild.UseVisualStyleBackColor = true;
             this.btnBuild.Click += new System.EventHandler(this.btnBuildClick);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(13, 112);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(572, 25);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "*Note: If everything go wrong, please click button new on toolstrip";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1245, 513);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnBuild);
             this.Controls.Add(this.tbExename);
             this.Controls.Add(this.label1);
@@ -347,6 +359,7 @@ namespace Generator
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbExename;
         private System.Windows.Forms.Button btnBuild;
+        private System.Windows.Forms.Label label2;
     }
 }
 

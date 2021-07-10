@@ -139,7 +139,14 @@ namespace Generator
 
         private void btnBuildClick(object sender, EventArgs e)
         {
-            generator.Build(richTextBox2,tbExename.Text);
+            try
+            {
+                generator.Build(richTextBox2, tbExename.Text);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Try button new and then do your request again");
+            }
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
@@ -192,7 +199,7 @@ namespace Generator
             }
             catch(Exception ex)
             {
-
+                MessageBox.Show("Try button new and then do your request again");
             }
         }
 
@@ -228,7 +235,11 @@ namespace Generator
             {
 
             }
-            
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
